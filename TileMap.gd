@@ -43,6 +43,7 @@ class CellGroup:
 		return true
 		
 	func _move(direction):
+		_tilemap.get_node("/root/AudioManager").play("Push")
 		var direction_map_coords = Vector2(sign(direction.x), sign(direction.y))
 		var first_cell = _tilemap.get_cellv(_cell_coords_array[0])
 
@@ -73,6 +74,7 @@ class CellGroup:
 					var player_new_coords_map_space = _tilemap.world_to_map(overlap.collider.position)
 					var overlapping_cell = _tilemap.get_cellv(player_new_coords_map_space)
 					if overlapping_cell != _tilemap.NONE:
+						_tilemap.get_node("/root/AudioManager").play("Death")
 						_tilemap.get_tree().reload_current_scene()
 
 		# remove cells from tilemap and cell group map
@@ -87,27 +89,6 @@ class CellGroup:
 			_cell_coords_array[i] = cell_coords
 			_tilemap.set_cellv(cell_coords, first_cell)
 			_cell_group_map.set_group(cell_coords, self)
-
-	func _move_player_if_necessary(cell_coords, space_state):
-		var cell_size = _tilemap.get_cell_size()
-			
-		var world_coords = _tilemap.map_to_world(cell_coords)
-		world_coords += cell_size / 2
-			
-		# prepare overlap query parameters 			
-		var param = Physics2DShapeQueryParameters.new()
-		param.transform.origin = world_coords
-
-		var shape = RectangleShape2D.new()
-		shape.set_extents(cell_size / 2)
-		param.set_shape(shape)
-
-		# check overlaps
-		var overlaps = space_state.intersect_shape(param)
-
-		for overlap in overlaps:
-			if overlap.collider.name == "Player":
-				overlap.collider.position.y = world_coords.y + cell_size.y
 
 	func is_on_floor():
 		return _is_on_floor
@@ -226,6 +207,7 @@ func _process(delta):
 
 func remove_vertical_line_segment(x_first, x_last, y):
 	for x in range(x_first, x_last + 1):
+		$"/root/AudioManager".play("Crash")
 		var destroyable_map_coords = Vector2(x, y)
 		set_cellv(destroyable_map_coords, NONE)
 	

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Win.wav-e8724bdd4c0b962e68961ea449ffe17c.sample"
+
+[deps]
+
+source_file="res://Audio/Win.wav"
+source_md5="80bca17a2074e466ad1d2bd6e29eb6af"
+
+dest_files=[ "res://.import/Win.wav-e8724bdd4c0b962e68961ea449ffe17c.sample" ]
+dest_md5="d4b2e1deaa4ba49e6e99eba522c2b7f8"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

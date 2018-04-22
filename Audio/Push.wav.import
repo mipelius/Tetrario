@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Push.wav-8e2c2455d33bb3b284813c42556b6946.sample"
+
+[deps]
+
+source_file="res://Audio/Push.wav"
+source_md5="c87537891c38f6ed23e19821fbc028b0"
+
+dest_files=[ "res://.import/Push.wav-8e2c2455d33bb3b284813c42556b6946.sample" ]
+dest_md5="31118f39126efba391b7737c4a525f56"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
