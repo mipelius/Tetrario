@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://png/wall.png" type="Texture" id=1]
 [ext_resource path="res://png/movable_wall1.png" type="Texture" id=2]
@@ -6,6 +6,11 @@
 [ext_resource path="res://png/movable_wall3.png" type="Texture" id=4]
 [ext_resource path="res://png/movable_wall4.png" type="Texture" id=5]
 [ext_resource path="res://png/movable_wall5.png" type="Texture" id=6]
+[ext_resource path="res://png/movable_wall6.png" type="Texture" id=7]
+[ext_resource path="res://png/movable_wall7.png" type="Texture" id=8]
+[ext_resource path="res://png/movable_wall8.png" type="Texture" id=9]
+[ext_resource path="res://png/movable_wall9.png" type="Texture" id=10]
+[ext_resource path="res://png/movable_wall10.png" type="Texture" id=11]
 
 [node name="Node" type="Node"]
 
@@ -154,6 +159,131 @@ friction = 1.0
 bounce = 0.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MovableWall5/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
+
+[node name="MovableWall6" type="Sprite" parent="." index="6"]
+
+editor/display_folded = true
+position = Vector2( 400, 16 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="MovableWall6" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MovableWall6/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
+
+[node name="MovableWall7" type="Sprite" parent="." index="7"]
+
+editor/display_folded = true
+position = Vector2( 464, 16 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="MovableWall7" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MovableWall7/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
+
+[node name="MovableWall8" type="Sprite" parent="." index="8"]
+
+editor/display_folded = true
+position = Vector2( 528, 16 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="MovableWall8" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MovableWall8/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
+
+[node name="MovableWall9" type="Sprite" parent="." index="9"]
+
+editor/display_folded = true
+position = Vector2( 592, 16 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="MovableWall9" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MovableWall9/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
+
+[node name="MovableWall10" type="Sprite" parent="." index="10"]
+
+editor/display_folded = true
+position = Vector2( 656, 16 )
+texture = ExtResource( 11 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="MovableWall10" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MovableWall10/StaticBody2D" index="0"]
 
 build_mode = 0
 polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
