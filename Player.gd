@@ -45,7 +45,10 @@ func _physics_process(delta):
 	var friction = true
 	if motion_update != 0:
 		friction = false
-		$Sprite.flip_h = motion_update < 0
+		$AnimatedSprite.flip_h = motion_update < 0
+		$AnimatedSprite.animation = "run"
+	else:
+		$AnimatedSprite.animation = "idle"
 	
 	_motion.x += motion_update
 	

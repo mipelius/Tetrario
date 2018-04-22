@@ -1,4 +1,6 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://png/bg.png" type="Texture" id=1]
 
 [node name="Camera2D" type="Camera2D"]
 
@@ -28,6 +30,7 @@ editor_draw_drag_margin = false
 
 [node name="Panel" type="Panel" parent="." index="0"]
 
+self_modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.0
 anchor_top = 1.0
 anchor_right = 0.0
@@ -42,7 +45,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-_sections_unfolded = [ "Anchor", "Rect" ]
+_sections_unfolded = [ "Anchor", "Rect", "Visibility" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -72,5 +75,14 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor" ]
+
+[node name="Sprite" type="Sprite" parent="." index="1"]
+
+modulate = Color( 0.580078, 0.5, 0.594431, 1 )
+position = Vector2( 9.01465, -3.65436 )
+scale = Vector2( 10.25, 5.75 )
+z_index = -10
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
 
 

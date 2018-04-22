@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/flag.png-d72dd0e0105c4c416db02aa797f6f060.stex"
+path="res://.import/player_run1.png-b7f1f686288ba6d8eeb29ca11a90227c.stex"
 
 [deps]
 
-source_file="res://png/flag.png"
-source_md5="fe5df2f4a36e5d262021ce9a4e138ab2"
+source_file="res://png/player_run1.png"
+source_md5="d8ea7993628efb36f27626cd7d348d99"
 
-dest_files=[ "res://.import/flag.png-d72dd0e0105c4c416db02aa797f6f060.stex" ]
-dest_md5="bea127d5831265066fe419767b80483f"
+dest_files=[ "res://.import/player_run1.png-b7f1f686288ba6d8eeb29ca11a90227c.stex" ]
+dest_md5="42041142cc1df5c09c5f381e9eeef6e5"
 
 [params]
 

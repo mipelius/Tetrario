@@ -10,7 +10,7 @@ source_file="res://png/movable_wall9.png"
 source_md5="2886692d0181adbf7872b83be724bdc0"
 
 dest_files=[ "res://.import/movable_wall9.png-ef6bd47dc2363f4d99c7d2639fff7952.stex" ]
-dest_md5="18542b528e0b3da518673f1f999df1be"
+dest_md5="c6ff3408f453b40156087cf42df2f580"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
