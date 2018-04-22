@@ -12,7 +12,7 @@ var _motion = Vector2()
 var _tilemap
 
 func _ready():
-	_tilemap = $"/root/World1/TileMap"
+	_tilemap = $"../TileMap"
 
 func _physics_process(delta):
 	# update _motion based on gravity and input
