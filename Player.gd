@@ -59,9 +59,9 @@ func _physics_process(delta):
 	# push
 	if (motion_update != 0) :
 		var wall_hit = test_move(transform, Vector2(_motion.x * delta, 0))
-		if wall_hit:
+		if wall_hit:			
 			var direction = Vector2(motion_update, 0)
-			_tilemap.push(position, direction)
+			_tilemap.push(position, direction, is_on_floor())
 
 	# move
 	_motion = move_and_slide(_motion, UP)
