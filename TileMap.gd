@@ -43,18 +43,68 @@ class CellGroup:
 		var direction_map_coords = Vector2(sign(direction.x), sign(direction.y))
 		var first_cell = _tilemap.get_cellv(_cell_coords_array[0])
 
+		# move player if necessary	
+		var space_state = _tilemap.get_world_2d().direct_space_state
+
+		for cell_coords in _cell_coords_array:
+			var cell_size = _tilemap.get_cell_size()
+				
+			var world_coords = _tilemap.map_to_world(cell_coords + direction_map_coords)
+			world_coords += cell_size / 2
+				
+			# prepare overlap query parameters 			
+			var param = Physics2DShapeQueryParameters.new()
+			param.transform.origin = world_coords
+	
+			var shape = RectangleShape2D.new()
+			shape.set_extents(cell_size / 2)
+			param.set_shape(shape)
+	
+			# check overlaps
+			var overlaps = space_state.intersect_shape(param)
+	
+			for overlap in overlaps:
+				if overlap.collider.name == "Player":
+					overlap.collider.position.y = world_coords.y + cell_size.y
+					# check if player should die
+					var player_new_coords_map_space = _tilemap.world_to_map(overlap.collider.position)
+					var overlapping_cell = _tilemap.get_cellv(player_new_coords_map_space)
+					if overlapping_cell != _tilemap.NONE:
+						_tilemap.get_tree().reload_current_scene()
+
 		# remove cells from tilemap and cell group map
 		for cell_coords in _cell_coords_array:
-			_tilemap.set_cellv(cell_coords, _tilemap.NONE)		
+			_tilemap.set_cellv(cell_coords, _tilemap.NONE)
 			_cell_group_map.set_group(cell_coords, null)
 			
-		# update cell_coords and add cells to tilemap and cell group map		
+		# update cell_coords and add cells to tilemap and cell group map
 		for i in range(0, _cell_coords_array.size()):
 			var cell_coords = _cell_coords_array[i]
 			cell_coords += direction_map_coords
 			_cell_coords_array[i] = cell_coords
 			_tilemap.set_cellv(cell_coords, first_cell)
 			_cell_group_map.set_group(cell_coords, self)
+
+	func _move_player_if_necessary(cell_coords, space_state):
+		var cell_size = _tilemap.get_cell_size()
+			
+		var world_coords = _tilemap.map_to_world(cell_coords)
+		world_coords += cell_size / 2
+			
+		# prepare overlap query parameters 			
+		var param = Physics2DShapeQueryParameters.new()
+		param.transform.origin = world_coords
+
+		var shape = RectangleShape2D.new()
+		shape.set_extents(cell_size / 2)
+		param.set_shape(shape)
+
+		# check overlaps
+		var overlaps = space_state.intersect_shape(param)
+
+		for overlap in overlaps:
+			if overlap.collider.name == "Player":
+				overlap.collider.position.y = world_coords.y + cell_size.y
 
 	func is_on_floor():
 		return _is_on_floor
