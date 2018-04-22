@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://LevelExit.gd" type="Script" id=1]
-[ext_resource path="res://png/icon.png" type="Texture" id=2]
+[ext_resource path="res://png/flag.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
+extents = Vector2( 15, 32 )
 
-[node name="LevelExit" type="Area2D"]
+[node name="LevelExit" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -20,16 +20,21 @@ audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Transform", "Z Index" ]
 __meta__ = {
-"_edit_group_": true
+"_edit_lock_": true
 }
 scene_to_load = null
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
+position = Vector2( -5, 0 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 

@@ -7,10 +7,10 @@ path="res://.import/movable_wall5.png-9051bf286772e88acc268c0476d3be93.stex"
 [deps]
 
 source_file="res://png/movable_wall5.png"
-source_md5="6480376ad2a0ebf708c491052703d269"
+source_md5="1f9bfa8d3120a164f4ae9a1eac97aa0a"
 
 dest_files=[ "res://.import/movable_wall5.png-9051bf286772e88acc268c0476d3be93.stex" ]
-dest_md5="b364c1fbad40463459ea987badeae76d"
+dest_md5="fe647799c518b4133724b5c35be71314"
 
 [params]
 

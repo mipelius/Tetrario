@@ -22,4 +22,6 @@ tile_data = PoolIntArray( 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0
 
 [node name="Camera2D" parent="." index="3" instance=ExtResource( 4 )]
 
+position = Vector2( 624, 393.623 )
+
 

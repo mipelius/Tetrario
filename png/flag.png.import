@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/movable_wall8.png-466e1b1245794056c5154b85f00caaa2.stex"
+path="res://.import/flag.png-d72dd0e0105c4c416db02aa797f6f060.stex"
 
 [deps]
 
-source_file="res://png/movable_wall8.png"
-source_md5="df12772a6721ac624f3b511e7a91c664"
+source_file="res://png/flag.png"
+source_md5="fe5df2f4a36e5d262021ce9a4e138ab2"
 
-dest_files=[ "res://.import/movable_wall8.png-466e1b1245794056c5154b85f00caaa2.stex" ]
-dest_md5="ca5fdc03145af7fc4afb04a1e6caa717"
+dest_files=[ "res://.import/flag.png-d72dd0e0105c4c416db02aa797f6f060.stex" ]
+dest_md5="466ea45c174d5ffda82d71e4f2c41b37"
 
 [params]
 
