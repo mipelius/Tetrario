@@ -5,12 +5,12 @@
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Camera2D.tscn" type="PackedScene" id=4]
 
-[node name="World5" type="Node"]
+[node name="World5" type="Node" index="0"]
 
 [node name="LevelExit" parent="." index="0" instance=ExtResource( 1 )]
 
 position = Vector2( 832, 480 )
-scene_to_load = "res://World1.tscn"
+scene_to_load = "res://WorldLast.tscn"
 
 [node name="Player" parent="." index="1" instance=ExtResource( 2 )]
 

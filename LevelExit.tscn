@@ -19,9 +19,6 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Transform", "Z Index" ]
-__meta__ = {
-"_edit_lock_": true
-}
 scene_to_load = null
 
 [node name="Sprite" type="Sprite" parent="." index="0"]

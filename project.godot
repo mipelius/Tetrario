@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="Tetrario"
-run/main_scene="res://World1.tscn"
+run/main_scene="res://World0.tscn"
 config/icon="res://icon.png"
 
 [display]
