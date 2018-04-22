@@ -6,10 +6,11 @@
 [sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 7.30429
-height = 16.9348
+radius = 7.0
+height = 15.0821
+_sections_unfolded = [ "Resource" ]
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -17,9 +18,6 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibility", "collision" ]
-__meta__ = {
-"_edit_group_": true
-}
 max_speed = 200.0
 acceleration = 50.0
 jump_height = 600.0
@@ -33,7 +31,8 @@ _sections_unfolded = [ "Region", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
+position = Vector2( -0.5, 0.5 )
 shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 
