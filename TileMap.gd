@@ -33,8 +33,11 @@ class CellGroup:
 		
 		for cell_coords in _cell_coords_array:
 			var cell_coords_to = cell_coords + direction_map_coords
-			var cell_to = _tilemap.get_cellv(cell_coords_to)
-			if cell_to != first_cell && cell_to != _tilemap.NONE:
+			if _cell_coords_array.has(cell_coords_to):
+				continue
+				
+			var cell_to = _tilemap.get_cellv(cell_coords_to)			
+			if cell_to != _tilemap.NONE:
 				return false
 				
 		return true
