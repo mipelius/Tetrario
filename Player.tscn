@@ -6,9 +6,8 @@
 [sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 7.0
-height = 15.0821
-_sections_unfolded = [ "Resource" ]
+radius = 6.87866
+height = 15.3248
 
 [node name="Player" type="KinematicBody2D"]
 

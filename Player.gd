@@ -6,19 +6,26 @@ export(float) var jump_height
 export(float) var gravity
 export(float) var push_speed
 
+var _player_jump_cancellation_delay = 0.1
+
 const UP = Vector2(0, -1)
 
 var _motion = Vector2()
 var _tilemap
-var _try_jump = false
+var _jump_delay_timer
 
 func _ready():
 	set_process_input(true)
 	_tilemap = $"../TileMap"
+	
+	_jump_delay_timer = Timer.new()
+	_jump_delay_timer.wait_time = _player_jump_cancellation_delay
+	_jump_delay_timer.one_shot = true
+	add_child(_jump_delay_timer)
 
 func _input(event):
 	if event.is_action_pressed("ui_up"):
-		_try_jump = true	
+		_jump_delay_timer.start()
 
 func _physics_process(delta):
 	# update _motion based on gravity and input
@@ -40,13 +47,12 @@ func _physics_process(delta):
 	if is_on_floor():
 		if friction:
 			_motion.x = lerp(_motion.x, 0, 0.4)		
-		if _try_jump:
+		if !_jump_delay_timer.is_stopped():
+			_jump_delay_timer.stop()
 			_motion.y -= jump_height
 	else:
 		if friction:
 			_motion.x = lerp(_motion.x, 0, 0.05)
-		if _try_jump:
-			_try_jump = false
 			
 	_motion.x = clamp(_motion.x, -max_speed, max_speed)
 
