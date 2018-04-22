@@ -20,7 +20,7 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibility", "collision" ]
 max_speed = 200.0
 acceleration = 50.0
-jump_height = 600.0
+jump_height = 650.0
 gravity = 40.0
 push_speed = 100.0
 
