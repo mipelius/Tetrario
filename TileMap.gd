@@ -184,8 +184,8 @@ func _ready():
 				_cell_groups.push_back(cell_group)
 
 func push(from, direction, is_on_floor):
-	var map_coords = world_to_map(from) + Vector2(sign(direction.x), sign(direction.y))
-	var cell_group = _cell_group_map.get_group(map_coords)
+	var map_coords = world_to_map(from)
+	var cell_group = _cell_group_map.get_group(map_coords + Vector2(sign(direction.x), sign(direction.y)))
 	if cell_group:
 		# if player is standing on cell_group to be pushed AND cell_group is on floor, cancel
 		if is_on_floor && cell_group.is_on_floor():
