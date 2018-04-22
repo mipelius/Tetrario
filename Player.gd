@@ -10,9 +10,15 @@ const UP = Vector2(0, -1)
 
 var _motion = Vector2()
 var _tilemap
+var _try_jump = false
 
 func _ready():
+	set_process_input(true)
 	_tilemap = $"../TileMap"
+
+func _input(event):
+	if event.is_action_pressed("ui_up"):
+		_try_jump = true	
 
 func _physics_process(delta):
 	# update _motion based on gravity and input
@@ -34,12 +40,14 @@ func _physics_process(delta):
 	if is_on_floor():
 		if friction:
 			_motion.x = lerp(_motion.x, 0, 0.4)		
-		if Input.is_action_pressed("ui_up"):
+		if _try_jump:
 			_motion.y -= jump_height
 	else:
 		if friction:
 			_motion.x = lerp(_motion.x, 0, 0.05)
-
+		if _try_jump:
+			_try_jump = false
+			
 	_motion.x = clamp(_motion.x, -max_speed, max_speed)
 
 	# push
