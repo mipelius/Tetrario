@@ -14,6 +14,10 @@ config/name="Tetrario"
 run/main_scene="res://World0.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+AudioManager="*res://AudioManager.tscn"
+
 [display]
 
 window/size/width=1280
