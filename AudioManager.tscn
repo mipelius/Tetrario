@@ -8,7 +8,7 @@
 [ext_resource path="res://Audio/Push.wav" type="AudioStream" id=6]
 [ext_resource path="res://Audio/Win.wav" type="AudioStream" id=7]
 
-[node name="AudioManager" type="Node" index="0"]
+[node name="AudioManager" type="Node"]
 
 script = ExtResource( 1 )
 
